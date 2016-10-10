@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>Date: {{ date }}</div>
+    <div>
+        Block 1: {{ render_esi(controller('AppBundle:Default:date', { 'blockTtl': 5 })) }}
+    </div>
+
+    <div>
+        Block 2: {{ render_esi(controller('AppBundle:Default:date', { 'blockTtl': 60 })) }}
+    </div>
+
+{% endblock %}
